@@ -30,13 +30,13 @@ class UI {
   }
   showProducts(products) {
     let output = "";
-    const categories = new Set(products.map((prod) => prod.category));
-    console.log(categories);
-    categories.forEach((cat) => {
-      const currentProduct = products.find((prod) => prod.category === cat);
-      console.log(currentProduct);
+    // const categories = new Set(products.map((prod) => prod.category));
+    // console.log(categories);
+    // categories.forEach((cat) => {
+    //   const currentProduct = products.find((prod) => prod.category === cat);
+    //   console.log(currentProduct);
       //html output
-    });
+    // });
     products.forEach((product) => {
       output += `
                   <div class="product-item text-center col-lg-3 col-md-4 col-12">
