@@ -35,6 +35,8 @@ class UI {
     //   //html output
     // });
 
+    //html output
+    // });
     products.forEach((product) => {
       const cat =
         product.category === "Nature"
