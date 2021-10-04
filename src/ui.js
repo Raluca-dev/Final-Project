@@ -19,33 +19,36 @@ class UI {
     this.description = document.getElementById("description");
     this.detailsDiv = document.getElementById("detailsDiv");
     this.tableBody = document.getElementById("table-body");
-    this.cartDiv = document.getElementById("cart");
     this.cartBody = document.getElementById("tablecart-body");
     this.cartCountInfo = document.getElementById("cart-basket");
     this.title = document.getElementById("title");
-    // this.cartTotalValue = document.getElementById("total");
-    // this.navbar = document.getElementById("navbar");
     this.quantity = document.getElementById("quantity");
     // this.adminDiv = document.getElementById("products-admin");
   }
   showProducts(products) {
     let output = "";
-    const categories = new Set(products.map((prod) => prod.category));
-    console.log(categories);
-    categories.forEach((cat) => {
-      const currentProduct = products.find((prod) => prod.category === cat);
-      console.log(currentProduct);
-      //html output
-    });
+    // const categories = new Set(products.map((prod) => prod.category));
+    // console.log(categories);
+    // categories.forEach((cat) => {
+    //   const currentProduct = products.find((prod) => prod.category === cat);
+    //   console.log(currentProduct);
+    //   //html output
+    // });
+
     products.forEach((product) => {
+      const cat =
+        product.category === "Nature"
+          ? "naturalis"
+          : product.category === "Nature";
+      console.log(cat);
       output += `
                   <div class="product-item text-center col-lg-3 col-md-4 col-12">
                         <div class="product-img" id="image">
                           <img src="${product.picture}" alt="product image">
                         </div>
                         <div class="product-content">
-                            <h3 class="product-name" id="title">${product.name}</h3>
-                            <a href="#"><span class="product-category" id="category">${product.category}</span></a>
+                            <h3 class="product-name" id="title">${product.name} <h4 id="category">${product.category}</h4></h3>
+                            
                             <button class="product-details btn btn-outline-success details" onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
                             <p class="product-price" id="price">${product.price}$</p>
                         </div>
@@ -71,8 +74,7 @@ class UI {
                           <img src="${product.picture}" alt="product image">
                         </div>
                         <div class="product-content">
-                            <h3 class="product-name" id="title">${product.name}</h3>
-                            <a href="#"><span class="product-category" id="category">${product.category}</span></a>
+                            <h3 class="product-name" id="title">${product.name} <h4 id="category">${product.category}</h4></h3>
                             <button class="product-details btn btn-outline-success details" onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
                             <p class="product-price" id="price">${product.price}$</p>
                         </div>
@@ -133,6 +135,33 @@ class UI {
         },
       });
     });
+  }
+
+  showAdminProducts(products) {
+    let output = "";
+    products.forEach((product) => {
+      output = `
+                    <tr id="cart-row">
+                        <td><img class="admin-image" src="${product.picture}"></td>
+                        <td>${product.name}</td>
+                        <td>${product.category}</td>
+                        <td>${product.description}</td>
+                        <td>${product.stock}</td>
+                        <td>${product.price}</td>
+                        <td><button class="removeBtn delete" id="${product.id}" onclick="removeBtn delete">Remove</button></td>
+                    </tr>
+            `;
+      this.tableBody.innerHTML += output;
+    });
+  }
+
+  clearFields() {
+    document.getElementById("image").value = "";
+    document.getElementById("title").value = "";
+    document.getElementById("category").value = "";
+    document.getElementById("stock").value = "";
+    document.getElementById("price").value = "";
+    document.getElementById("description").value = "";
   }
 
   showProductsCart(storageItems) {
@@ -196,7 +225,7 @@ class UI {
 
   updateCartInfo() {
     let cartInfo = numberOfItemsInCart();
-    console.log(cartInfo);
+    // console.log(cartInfo);
     this.cartCountInfo.textContent = cartInfo;
   }
 }
