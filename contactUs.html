@@ -53,14 +53,14 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contactUs.html">Contact Us</a>
+              <a class="nav-link active" href="contactUs.html">Contact Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link " type="button" href="admin.html">Admin</a> 
             </li>
             <li class="nav-item  text-uppercase mb-0 position-relative d-lg-flex">
                <div id="cart" class="cart">                             
-               <a href="cart.html" class="cart position-relative active" aria-label="View your shopping cart" id="cart-btn">
+               <a href="cart.html" class="cart position-relative " aria-label="View your shopping cart" id="cart-btn">
                  <i class=" text-dark fas fa-shopping-bag fa-lg"></i>
                  <span class="cart-basket d-flex align-items-center justify-content-center" id="cart-basket">0
                  </span>
@@ -72,42 +72,47 @@
       </div>
     </nav>
 
-    <section id="cart-header">
-      <div class="container container-banner text-center mt-5">
-      </div>
-    </section>
-
-    <div id="cart" class="container my-4 ">
-        <table id="table-cart"  class="table table-striped" >
-           <thead id="table-head">
-                <tr>
-                    <th scope="col" class="text-center">Product</th>
-                    <th scope="col" class="text-center">Available</th>
-                    <th scope="col" class="text-center">Quantity</th>
-                    <th scope="col" class="text-center">Price $</th>
-                    <th scope="col" class="text-center">Subtotal $</th>
-                    <th scope="col" class="text-center">Remove</th>
-                </tr>
-           </thead>
-
-           <!-- Dynamic row insertion -->
-           <tbody id="tablecart-body" class="cart-table text-center"></tbody>
-        </table>
-        <span id="total"><strong>TOTAL</strong> (including shipping): <strong>   $</strong> </span>
-        <div class="col mb-2">
-            <div class="row">
-                <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-lg btn-block" onClick="location.href='shop.html'" >Continue Shopping</button>
+    <!-- Contact us form -->
+         <section id="contact-form">
+        <form >
+            <!--left-->
+            <div class="contact-left">
+                <!--heading-->
+                <h1 class="c-l-heading">Write Me</h1>
+                <!--form name-->
+                <div class="f-name">
+                <!--name-->
+                    <font>Name</font>
+                <!--input-->
+                    <input type="text" placeholder="Full Name">
                 </div>
-                <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase" id="buyProducts" >Checkout</button>
+                <!-- form email-->
+                <div class="f-email">
+                <!--name-->
+                    <font>Email</font>
+                <!--input-->
+                    <input type="email" placeholder="exemple@gmail.com">
                 </div>
             </div>
-      </div>
-    </div>
- 
 
-    <!-- Footer -->
+            <!--right-->
+            <div class="contact-right">
+                <!--message-->
+                <div class="message">
+                    <font>Message</font>
+                    <textarea name="message" cols="20" rows="5" placeholder="Write message..."></textarea>
+                </div>
+                    <!--submit-->
+                <button>Submit</button>
+                
+                
+                
+            </div>
+        </form>
+
+    </section>
+
+        <!-- Footer -->
     <footer class="text-center text-lg-start mt-3">
       <!-- Section: Social media -->
       <section
@@ -228,7 +233,8 @@
       </div>
       <!-- Copyright -->
     </footer>
-    
+
+
     <!-- Bootstrap script -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -242,7 +248,5 @@
     ></script>
     <!-- JavaScript -->
     <script src="./src/app.js" type="module"></script>
-    <script src="./src/cart.js" type="module"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-</body>
+  </body>
 </html>

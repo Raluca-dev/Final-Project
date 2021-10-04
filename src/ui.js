@@ -51,7 +51,7 @@ class UI {
                         <div class="product-content">
                             <h3 class="product-name" id="title">${product.name} <h4 id="category">${product.category}</h4></h3>
                             
-                            <button class="product-details btn btn-outline-success details" onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
+                            <button class="product-details" onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
                             <p class="product-price" id="price">${product.price}$</p>
                         </div>
                       </div>
@@ -77,7 +77,7 @@ class UI {
                         </div>
                         <div class="product-content">
                             <h3 class="product-name" id="title">${product.name} <h4 id="category">${product.category}</h4></h3>
-                            <button class="product-details btn btn-outline-success details" onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
+                            <button class="product-details " onclick="location.href='details.html?id=${product.id}';" id="${product.id}">DETAILS</button>
                             <p class="product-price" id="price">${product.price}$</p>
                         </div>
                       </div>
@@ -108,7 +108,7 @@ class UI {
                         <input type="radio" id="gift-wrapped-no" name="gift-wrapping"></p>
                       
                         </form>
-                        <button type="button" class="btn add-to-cart-btn" id="addToCartBtn">
+                        <button type="button" class="btn add-to-cart-btn" id="addToCartBtn" onClick="document.location.reload(true)">
                             <i class="fas fa-shopping-bag"></i>Add to Cart
                         </button>
                         <h4 class="mt-5 mb-5">What have we done here:</h4>
