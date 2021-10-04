@@ -617,11 +617,12 @@ table tr:nth-child(even) {
 
 #contact-form {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 92px;
+  background-color: #e2e8f0;
 }
 #contact-form form {
   display: flex;
