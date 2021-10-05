@@ -8,13 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getCartTotal(storageItems) {
+  let subtotal = 0;
   let total = 0;
 
   for (let item of storageItems) {
     let numberOfProducts = parseInt(item.count);
     let productPrice = parseInt(item.product.price);
     let shipping = 5;
-    total = total + numberOfProducts * productPrice + shipping;
+    subtotal = subtotal + numberOfProducts * productPrice;
+    // console.log(subtotal);
+    total = subtotal + shipping;
+    // console.log(total);
   }
   //console.log(total);
   addEventListener("DOMContentLoaded", () => {

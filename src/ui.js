@@ -108,7 +108,7 @@ class UI {
                         <input type="radio" id="gift-wrapped-no" name="gift-wrapping"></p>
                       
                         </form>
-                        <button type="button" class="btn add-to-cart-btn" id="addToCartBtn" onClick="document.location.reload(true)">
+                        <button type="button" class="btn add-to-cart-btn" id="addToCartBtn">
                             <i class="fas fa-shopping-bag"></i>Add to Cart
                         </button>
                         <h4 class="mt-5 mb-5">What have we done here:</h4>
@@ -136,6 +136,7 @@ class UI {
           popup: "animate__animated animate__fadeOutUp",
         },
       });
+      document.location.reload(true);
     });
   }
 
