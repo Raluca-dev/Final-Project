@@ -456,7 +456,7 @@ body
   color: #f2e8f8;
 }
 
-/* Cart */
+/* Cart and Admin page*/
 
 ul li a.cart .cart-basket {
   font-size: 0.6rem;
@@ -507,7 +507,7 @@ ul li a.cart .cart-basket {
   background-attachment: fixed;
 }
 #table-cart,
-#book-table {
+#admin-table {
   border-collapse: collapse;
   width: 100%;
   text-align: left;
@@ -578,10 +578,18 @@ table tr:nth-child(even) {
 }
 #total {
   font-size: 1.5em;
-  display: flex;
-  float: right;
+  display: inline-block;
+  /* float: right; */
   margin-right: 30px;
+  margin-bottom: 10px;
   color: #2f4665;
+}
+
+#cart > div > div > div:nth-child(1) > button {
+  margin-right: 10px;
+}
+#cart > div > div > div:nth-child(2) > button {
+  margin-left: 10px;
 }
 
 /*  About page  */
