@@ -612,7 +612,7 @@ table tr:nth-child(even) {
   text-align: left;
   font-size: 1rem;
   padding: 0 50px;
-  animation: fadeInAnimation ease 3s;
+  animation: fadeInAnimation ease 5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
