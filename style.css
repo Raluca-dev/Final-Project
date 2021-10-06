@@ -552,6 +552,10 @@ table tr:nth-child(even) {
 .form-group textarea::placeholder {
   color: #9b72aab7;
 }
+.form-group input,
+.form-group textarea {
+  margin-bottom: 10px;
+}
 
 .admin-image,
 .admin-card-img {
