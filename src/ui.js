@@ -6,7 +6,6 @@ import {
   numberOfItemsInCart,
 } from "./localStorage.js";
 
-// import { findCartInfo } from "./cart.js";
 
 class UI {
   constructor() {
@@ -22,21 +21,11 @@ class UI {
     this.cartBody = document.getElementById("tablecart-body");
     this.cartCountInfo = document.getElementById("cart-basket");
     this.title = document.getElementById("title");
-    this.quantity = document.getElementById("quantity");
-    // this.adminDiv = document.getElementById("products-admin");
+    this.quantity = document.getElementById("quantity");  
   }
   showProducts(products) {
     let output = "";
-    // const categories = new Set(products.map((prod) => prod.category));
-    // console.log(categories);
-    // categories.forEach((cat) => {
-    //   const currentProduct = products.find((prod) => prod.category === cat);
-    //   console.log(currentProduct);
-    //   //html output
-    // });
-
-    //html output
-    // });
+   
     products.forEach((product) => {
       const cat =
         product.category === "Nature"
@@ -68,8 +57,7 @@ class UI {
   showCategory(products) {
     let output = "";
     this.showCategoryTitle(products[0].category);
-    products.forEach((product) => {
-      // if (product.category === "Harry Potter") {
+    products.forEach((product) => {      
       output += `
                   <div class="product-item text-center col-lg-3 col-md-4 col-12">
                         <div class="product-img" id="image">
@@ -82,8 +70,7 @@ class UI {
                         </div>
                       </div>
            `;
-      this.productContainer.innerHTML = output;
-      // }
+      this.productContainer.innerHTML = output;     
     });
   }
 

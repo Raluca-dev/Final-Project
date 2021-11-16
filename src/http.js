@@ -1,5 +1,5 @@
 class CustomHTTPMethods {
-  //fetch(url).then().then()
+  
 
   async get(url) {
     const response = await fetch(url);

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function showHPproducts() {
   http
-    //  .get("http://localhost:3000/products")
     .get(`https://61363d1d8700c50017ef54cb.mockapi.io/Nightmagnets`)
     .then((data) => {
       ui.showHPproducts(data);
